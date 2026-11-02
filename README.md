@@ -13,7 +13,7 @@ DEGWO (Differential Evolution – Grey Wolf Optimizer) adalah metode optimasi me
 
 Setelah model BiLSTM menghasilkan prediksi, residual (selisih nilai aktual dan prediksi) dihitung, lalu diproses melalui dua lapis pengujian statistik berikut:
 
-![Diagram Deteksi Dua Lapis](images/diagram_deteksi_dua_lapis.jpeg)
+![Diagram Deteksi Dua Lapis](images/Flowchart.png)
 
 - **Lapis 1 (Window Chi-Squared)**: menguji sekumpulan residual dalam satu window menggunakan distribusi chi-squared. Jika *p-value* ≥ 0,05, window dinyatakan **Normal**; jika tidak, dilanjutkan ke Lapis 2.
 - **Lapis 2 (Z-score per titik data)**: setiap titik data residual dihitung z-score-nya, lalu diklasifikasikan sesuai ambang batas berikut:
@@ -30,4 +30,4 @@ Status = Normal,   jika |z| ≤ 2
 ![Aktual vs Prediksi HMP155A](images/aktual_vs_prediksi_hmp155a.png)
 
 ### Distribusi Residual & Proporsi Status Kondisi Sensor
-![Distribusi Residual HMP155A](images/distribusi_residual_hmp155a.png)
+![Distribusi Residual HMP155A](images/Distribusi.png)
